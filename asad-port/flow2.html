@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Asad's Portfolio</title>
+</head>
+<body>
+
+  <!-- navigation -->
+  <header class="header">
+    <nav class="navbar">
+        <a href="#top" class="nav-logo">
+          <img src="#" alt="" class="nav-logo-blank">
+        <img src="images/redglowalightning.png" class="nav-logo2" alt="">
+        <img src="images/redglowalightningblack.png" class="nav-logo3" alt="">
+      </a>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html#about" class="nav-link">OM MIG</a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html#skills" class="nav-link">KOMPENTANCER</a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html#portfolio" class="nav-link">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link">KONTAKT</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <!-- title start of content -->
+  <div class="content">
+  <div class="title">
+        <h1 class="headline"> Studie Projekt 3</h1>
+  </div>
+
+  <!-- start og image processing project info -->
+
+    <div class="undertitle">
+        <h2 class="headline">Mit første portfolio</h2>
+    </div>
+
+    <div class="projectstuff">
+
+      <div class="projectimg">
+
+        <a href="http://asadsiddiqi.com/asad-port/" class="gallery2">
+          <div class="flow2pic2"> 
+            <div class="textbox2">
+              <div class="project-text2">
+                <p>klik for at se portfolio</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="projectinfo">
+        <p>
+          Vi fik til opgave at kode vores egen portolio som vi havde skitseret fra tidligere projekt. Jeg havde lavet nogle små ændringer på min portfolio, i forhold til skrift of farvevalg. 
+          Siden skal give personen der tjekker den ud en hurtig og simpel gennemgang af hvem jeg er, hvad jeg laver og mit portfolio galleri. På min portfolio er alt information på en side, hvor man så kan scrolle ned og se alt. Jeg har en navigationsbar i toppen som gør at man hurtigt kan finde det man leder efter.           
+            
+        </p>
+        <p>
+            klik op kasserne for at se mere
+        </p>
+      </div>
+
+    </div>
+
+  <div class="undertitle">
+    <h2 class="headline">Kode & Portfolio</h2>
+  </div>
+
+  <div class="projectstuff">
+    
+    
+    <div class="projectimg">
+
+      <a href="https://github.com/AsadSi/portfolio" class="gallery2">
+        <div class="flow2pic1"> 
+          <div class="textbox2">
+            <div class="project-text2">
+              <p>klik for at se kode</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="projectimg">
+
+      <a href="images/flow1/asadafleveringphotoshop.jpg" class="gallery2">
+        <div class="flow2pic3"> 
+          <div class="textbox2">
+            <div class="project-text2">
+              <p>klik for at se logo</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    </div>
+
+  </div>
+
+
+  <footer> &copy Asad Siddiqi</footer>
+
+  <script>
+
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+      
+          hamburger.addEventListener("click", mobileMenu);
+      
+        function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      }
+      
+        const navLink = document.querySelectorAll(".nav-link");
+      
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+      
+        function closeMenu() {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+      }
+      
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";
+        }
+  </script>
+
+</body>
+</html>
